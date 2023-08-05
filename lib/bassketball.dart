@@ -43,13 +43,15 @@ mainAxisAlignment: MainAxisAlignment.center,
           SizedBox(height: 20),
           Text("Team A",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
 
-          Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
+          Text("$A",style: TextStyle(fontSize: 100,fontWeight: FontWeight.normal)),
 
             Padding(
               padding: EdgeInsets.symmetric(vertical: 5),
               child: GestureDetector(
                 onTap: (){
-
+                  setState(() {
+                    A=A+1;
+                  });
                 },
                 child: Container(
                   color: kcolors,
@@ -64,12 +66,15 @@ mainAxisAlignment: MainAxisAlignment.center,
               child: GestureDetector(
                 onTap: (){
 
+               setState(() {
+                 A=A+2;
+               });
                 },
                 child: Container(
                   color: kcolors,
                   width: 140,
                   height: 40,
-                  child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                  child: Center(child: Text('Add 2 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
                 ),
               ),
             ),
@@ -77,13 +82,15 @@ mainAxisAlignment: MainAxisAlignment.center,
               padding: EdgeInsets.symmetric(vertical: 5),
               child: GestureDetector(
                 onTap: (){
-
+                  setState(() {
+                    A=A+3;
+                  });
                 },
                 child: Container(
                   color: kcolors,
                   width: 140,
                   height: 40,
-                  child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                  child: Center(child: Text('Add 3 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
                 ),
               ),
             ),
@@ -98,13 +105,16 @@ mainAxisAlignment: MainAxisAlignment.center,
 
       ),
 
-              SizedBox(
-                height: 500,
-                child: VerticalDivider(
-                  indent: 50,
-                  endIndent: 50,
-                  color: Colors.grey,
-                  thickness: 2,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const SizedBox(
+                  height: 500,
+                  child: VerticalDivider(
+                    indent: 50,
+                    endIndent: 50,
+                    color: Colors.grey,
+                    thickness: 2,
+                  ),
                 ),
               ),
 
@@ -112,15 +122,17 @@ mainAxisAlignment: MainAxisAlignment.center,
 
                 children:  [
                   SizedBox(height: 20),
-                  Text("Team A",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
+                  Text("Team B",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
 
-                  Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
+                  Text("$B",style: TextStyle(fontSize: 100,fontWeight: FontWeight.normal)),
 
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 5),
                     child: GestureDetector(
                       onTap: (){
-
+                        setState(() {
+                          B=B+1;
+                        });
                       },
                       child: Container(
                         color: kcolors,
@@ -134,13 +146,15 @@ mainAxisAlignment: MainAxisAlignment.center,
                     padding: EdgeInsets.symmetric(vertical: 5),
                     child: GestureDetector(
                       onTap: (){
-
+                        setState(() {
+                          B=B+2;
+                        });
                       },
                       child: Container(
                         color: kcolors,
                         width: 140,
                         height: 40,
-                        child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                        child: Center(child: Text('Add 2 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
                       ),
                     ),
                   ),
@@ -148,13 +162,15 @@ mainAxisAlignment: MainAxisAlignment.center,
                     padding: EdgeInsets.symmetric(vertical: 5),
                     child: GestureDetector(
                       onTap: (){
-
+                        setState(() {
+                          B=B+3;
+                        });
                       },
                       child: Container(
                         color: kcolors,
                         width: 140,
                         height: 40,
-                        child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                        child: Center(child: Text('Add 3 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
                       ),
                     ),
                   ),
@@ -179,7 +195,10 @@ mainAxisAlignment: MainAxisAlignment.center,
             padding: EdgeInsets.symmetric(vertical: 5),
             child: GestureDetector(
               onTap: (){
-
+                setState(() {
+                  B=0;
+                  A=0;
+                });
               },
               child: Container(
                 color: kcolors,
