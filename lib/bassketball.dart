@@ -3,9 +3,17 @@
 
 import 'package:flutter/material.dart';
 
-class basketball extends StatelessWidget {
+class basketball extends StatefulWidget {
   const basketball({super.key});
 
+  @override
+  State<basketball> createState() => _basketballState();
+}
+
+class _basketballState extends State<basketball> {
+
+  int A=0 ;
+  int B=0 ;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -26,13 +34,140 @@ class basketball extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
 
-          const Row(
-
+          Row(
+mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             mycoulum1() ,
+          Column(
 
-              Divider(height:10,indent: 10,thickness: 10,color: Colors.black, ),
-              mycoulum2() ,
+          children:  [
+          SizedBox(height: 20),
+          Text("Team A",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
+
+          Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
+
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 5),
+              child: GestureDetector(
+                onTap: (){
+
+                },
+                child: Container(
+                  color: kcolors,
+                  width: 140,
+                  height: 40,
+                  child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 5),
+              child: GestureDetector(
+                onTap: (){
+
+                },
+                child: Container(
+                  color: kcolors,
+                  width: 140,
+                  height: 40,
+                  child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 5),
+              child: GestureDetector(
+                onTap: (){
+
+                },
+                child: Container(
+                  color: kcolors,
+                  width: 140,
+                  height: 40,
+                  child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                ),
+              ),
+            ),
+
+
+
+
+
+
+        ],
+
+
+      ),
+
+              SizedBox(
+                height: 500,
+                child: VerticalDivider(
+                  indent: 50,
+                  endIndent: 50,
+                  color: Colors.grey,
+                  thickness: 2,
+                ),
+              ),
+
+              Column(
+
+                children:  [
+                  SizedBox(height: 20),
+                  Text("Team A",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
+
+                  Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
+
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: GestureDetector(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                        color: kcolors,
+                        width: 140,
+                        height: 40,
+                        child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: GestureDetector(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                        color: kcolors,
+                        width: 140,
+                        height: 40,
+                        child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: GestureDetector(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                        color: kcolors,
+                        width: 140,
+                        height: 40,
+                        child: Center(child: Text('Add 1 Point',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+                      ),
+                    ),
+                  ),
+
+
+
+
+
+
+                ],
+
+
+              ),
 
 
 
@@ -40,7 +175,20 @@ class basketball extends StatelessWidget {
             ],
           ),
           SizedBox(height: 50),
-          mybutton(titel: 'Reset'),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 5),
+            child: GestureDetector(
+              onTap: (){
+
+              },
+              child: Container(
+                color: kcolors,
+                width: 140,
+                height: 40,
+                child: Center(child: Text('Reset',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
+              ),
+            ),
+          ),
 
         ],
       ),
@@ -49,87 +197,4 @@ class basketball extends StatelessWidget {
   }
 }
 
-class mycoulum2 extends StatelessWidget {
-  const mycoulum2({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-
-      children: const [
-        SizedBox(height: 20),
-        Text("Team B",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
-
-        Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
-
-       mybutton(titel: "Add 1 point"),
-        mybutton(titel: "Add 2 point"),
-        mybutton(titel: "Add 2 point"),
-
-
-
-
-
-
-      ],
-
-
-    );
-  }
-}
-class mycoulum1 extends StatelessWidget {
-  const mycoulum1({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-
-      children: [
-        SizedBox(height: 20),
-        Text("Team A",style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold)),
-
-        Text("0",style: TextStyle(fontSize: 200,fontWeight: FontWeight.bold)),
-
-        mybutton(titel: "Add 1 point"),
-        mybutton(titel: "Add 2 point"),
-        mybutton(titel: "Add 2 point"),
-
-
-
-
-
-      ],
-
-
-    );
-  }
-}
-
-class mybutton extends StatelessWidget {
-  const mybutton({
-    super.key, required this.titel,
-  });
-final String titel;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: GestureDetector(
-        onTap: (){},
-        child: Container(
-          color: kcolors,
-          width: 140,
-            height: 40,
-          child: Center(child: Text(titel,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)),
-        ),
-      ),
-    );
-  }
-}
-
-
-const Color kcolors =Colors.orangeAccent;
+const Color kcolors=Colors.orangeAccent;
